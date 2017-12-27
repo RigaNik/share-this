@@ -40,6 +40,10 @@
             line-height: $share-this-sharer-height;
             text-align: center;
 
+            &[data-share-via="copy"] {
+                width: $share-this-sharer-width * 4.5;
+            }
+
             > a {
                 display: inline-block;
                 width: 100%;
