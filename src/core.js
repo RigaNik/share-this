@@ -55,6 +55,12 @@ export default (opts) => {
             _window = _undefined;
 
             return destroyed = true;
+        },
+        reposition() {
+            if (popover) {
+                stylePopover(popover, getConstrainedRange(), options);
+            }
+            return !!popover;
         }
     };
 
@@ -127,7 +133,7 @@ export default (opts) => {
 
     function sharerCheck(text, rawText, sharer) {
         const active = sharer.active;
-        if (isCallable(active)) {
+        if (isCallable(active) && !/\S/.test(rawText)) {
             return active(text, rawText);
         }
 
