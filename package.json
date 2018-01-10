@@ -18,7 +18,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm test",
+    "build": "gulp",
+    "prepare": "npm test",
     "preversion": "npm test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "test": "nyc --require babel-core/register mocha test/*.js test/sharers/*.js",
@@ -46,7 +47,7 @@
     "mocha": "^3.2.0",
     "nyc": "^10.0.0",
     "rollup-plugin-babel": "^2.7.1",
-    "rollup-stream": "^1.16.0",
+    "rollup-stream": "^1.24.0",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "vinyl-buffer": "^1.0.0",
