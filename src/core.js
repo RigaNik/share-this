@@ -114,7 +114,7 @@ export default (opts) => {
 
         if (!toBeOpened) return;
 
-        lifeCycle.attachPopover(popover);
+        lifeCycle.attachPopover(popover, options);
 
         if (isCallable(options.onOpen)) {
             options.onOpen(popover, text, rawText);

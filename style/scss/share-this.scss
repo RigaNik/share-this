@@ -24,6 +24,7 @@
         pointer-events: auto;
         list-style: none;
         padding: 0;
+        height: $share-this-sharer-height;
         margin: $share-this-vertical-offset - $share-this-arrow-size 0 0;
         white-space: nowrap;
         background: $share-this-background;
@@ -41,7 +42,7 @@
             text-align: center;
 
             &[data-share-via="copy"] {
-                width: $share-this-sharer-width * 4.5;
+                width: $share-this-sharer-width * 2.5;
             }
 
             > a {

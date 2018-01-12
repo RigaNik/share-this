@@ -46,8 +46,8 @@ export function lifeCycleFactory(document) {
             });
             return popover;
         },
-        attachPopover(popover) {
-            document.body.appendChild(popover);
+        attachPopover(popover, options) {
+            document.querySelector(options.selector).appendChild(popover);
         },
         removePopover(popover) {
             const parent = popover.parentNode;
