@@ -1,5 +1,8 @@
 export function render(text, rawText, refUrl) {
-    return `<a href="#" data-text="${text}\n\n- ${document.querySelector(".naziv-dokumenta").innerHTML} | ${refUrl}" target="_blank" rel="noopener nofollow noreferrer">`
+    const title = document.querySelector(".naziv-dokumenta").innerHTML;
+    const strippedTitle = title.replace();
+    console.log(strippedTitle);
+    return `<a href="#" data-text="${text}\n\n- ${strippedTitle} | ${refUrl}" target="_blank" rel="noopener nofollow noreferrer">`
     + "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 70 20\">"
     + "<path fill=\"#FFFFFF\" d=\"M9,18H1c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v12C10,17.6,9.6,18,9,18z M2,16h6V6H2V16z\"/>"
     + "<path fill=\"#FFFFFF\" d=\"M13,14h-2v-2h1V2H6v1H4V1c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v12C14,13.6,13.6,14,13,14z\"/>"
